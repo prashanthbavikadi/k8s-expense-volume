@@ -51,6 +51,7 @@ spec:
     project: expense
     tier: app
   ports:
-  - protocol: TCP
-    port: 8080 #service-port
-    targetPort: 8080 #target-port
+  - name: backend            # ✅ REQUIRED for ServiceMonitor
+    protocol: TCP
+    port: 8080               # service port
+    targetPort: 8080         # container port
